@@ -5,11 +5,14 @@ import Resume from "./Containers/Resume";
 import Skils from "./Containers/Skils";
 import Portfolio from "./Containers/Portfolio";
 import Contact from "./Containers/Contact";
+import Navbar from "./components/Navbar";
 import "./App.css";
 
 function App() {
     return (
         <div className="App">
+            <Navbar />
+
             <Routes>
                 <Route index path="/" element={<Home />} />
                 <Route path="/About" element={<About />} />
