@@ -11,11 +11,11 @@ const data = [
     },
     {
         label : 'ABOUT',
-        to : 'About'
+        to : '/About'
     },
     {
         label : 'RESUME',
-        to : 'Resume'
+        to : '/Resume'
     },
     {
         label : 'SKILLS',
