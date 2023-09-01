@@ -1,8 +1,12 @@
-import './style.scss'
+import "./style.scss";
 import React from "react";
 import { BsInfoCircleFill } from "react-icons/bs";
 import PageHeaderContent from "../../components/PageHeaderContainer";
 import { Animate } from "react-simple-animate";
+import { AiOutlineHtml5 } from "react-icons/ai";
+import { FaCss3Alt } from "react-icons/fa";
+import { RiJavascriptFill } from "react-icons/ri";
+import { BiLogoReact } from "react-icons/bi";
 
 const personalInfos = [
     {
@@ -19,11 +23,11 @@ const personalInfos = [
     },
     {
         label: "Github",
-        value: "https://github.com/isaias-B-Oliveira",
+        value: "github.com/isaias-B-Oliveira",
     },
     {
         label: "Linkedin",
-        value: "https://www.linkedin.com/in/isaias-oliveira-942219257/",
+        value: "linkedin.com/in/isaias-oliveira-942219257/",
     },
 ];
 
@@ -39,42 +43,86 @@ function About() {
             />
 
             <div className="about__content">
-                <Animate
-                    play
-                    duration={1.5}
-                    delay={1}
-                    start={{
-                        transform: "translateX(-900px)",
-                    }}
-                    end={{
-                        transform: "translateX(0px)",
-                    }}
-                >
-                    <h3>Front end Developer</h3>
-                    <p>{ResumePersonal}</p>
-                </Animate>
+                <div className="about__content__personalwrapper">
+                    <Animate
+                        play
+                        duration={1.5}
+                        delay={1}
+                        start={{
+                            transform: "translateX(-900px)",
+                        }}
+                        end={{
+                            transform: "translateX(0px)",
+                        }}
+                    >
+                        <h3>Front end Developer</h3>
+                        <p>{ResumePersonal}</p>
+                    </Animate>
 
-                <Animate
-                    play
-                    duration={1.5}
-                    delay={1}
-                    start={{
-                        transform: "translateX(500px)",
-                    }}
-                    end={{
-                        transform: "translateX(0px)",
-                    }}
-                >
-                    <h3>Personal Infomation</h3>
-                    <ul>
-                        {personalInfos.map((item, i) => (
-                            <li key={i}>
-                                <span className="title">{item.label}</span>
-                                <span className="value">{item.value}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </Animate>
+                    <Animate
+                        play
+                        duration={1.5}
+                        delay={1}
+                        start={{
+                            transform: "translateX(500px)",
+                        }}
+                        end={{
+                            transform: "translateX(0px)",
+                        }}
+                    >
+                        <h3 className="personalInformationText">
+                            Personal Infomation
+                        </h3>
+                        <ul>
+                            {personalInfos.map((item, i) => (
+                                <li key={i}>
+                                    <span className="title">{item.label}</span>
+                                    <span className="value">{item.value}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </Animate>
+                </div>
+                <div className="about__content__servicewrapper">
+                    <Animate
+                        play
+                        duration={1.5}
+                        delay={1}
+                        start={{
+                            transform: "translateX(600px)",
+                        }}
+                        end={{
+                            transform: "translateX(0px)",
+                        }}
+                    >
+                        <div className="about__content__servicewrapper__innercontent">
+                            <div>
+                                <AiOutlineHtml5
+                                    size={60}
+                                    color="var(--theme-main-color)"
+                                />
+                            </div>
+                            <div>
+                                <FaCss3Alt
+                                    size={60}
+                                    color="var(--theme-main-color)"
+                                />
+                            </div>
+                            <div>
+                                <RiJavascriptFill
+                                    size={60}
+                                    color="var(--theme-main-color)"
+                                />
+                            </div>
+                            <div>
+                                <BiLogoReact
+                                    size={60}
+                                    color="var(--theme-main-color)"
+                                />
+                            </div>
+                        </div>
+                    </Animate>
+                </div>
             </div>
         </section>
     );
