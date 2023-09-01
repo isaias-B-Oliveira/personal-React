@@ -1,8 +1,15 @@
 import React from 'react'
+import PageHeaderContent from '../../components/PageHeaderContainer';
+import {BsInfoCircleFill} from 'react-icons/bs'
 
 function Portfolio() {
   return (
-    <div>Portfolio</div>
+    <section id='portfolio' className='portfolio'>
+    <PageHeaderContent 
+      headerText = 'My Portfolio'
+      icon = {<BsInfoCircleFill size={40} />}
+    />
+  </section>
   )
 }
 
