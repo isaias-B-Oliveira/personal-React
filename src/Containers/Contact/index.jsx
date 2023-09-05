@@ -49,7 +49,13 @@ function Contact() {
                         <label htmlFor="email" className="emaillabel">Email</label>
                       </div>
                       <div>
-                      <input required type={'text'} name="description" className="inputdescription" />
+                      <textarea
+                       required 
+                       type={'text'} 
+                       name="description" 
+                       className="inputdescription"
+                       rows='5'
+                        />
                         <label htmlFor="description" className="descriptionlabel">Description</label>
                       </div>
                     </div>

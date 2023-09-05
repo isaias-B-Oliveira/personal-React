@@ -10,7 +10,7 @@ const data = [
         to : '/'
     },
     {
-        label : 'ABOUT',
+        label : 'SOBRE',
         to : '/About'
     },
     {
