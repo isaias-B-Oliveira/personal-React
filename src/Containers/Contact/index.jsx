@@ -2,7 +2,7 @@ import React from "react";
 import PageHeaderContent from "../../components/PageHeaderContainer";
 import { BsInfoCircleFill } from "react-icons/bs";
 import { Animate } from "react-simple-animate";
-import './style.scss'
+import "./style.scss";
 
 function Contact() {
     return (
@@ -38,30 +38,48 @@ function Contact() {
                         transform: "translateX(0px)",
                     }}
                 >
-                  <div className="contact__content__form">
-                    <div className="contact__content__form__controlswrapper">
-                      <div>
-                        <input required type={'text'} name="name" className="inputname" />
-                        <label htmlFor="name" className="namelabel">Name</label>
-                      </div>
-                      <div>
-                      <input required type={'text'} name="email" className="inputemail" />
-                        <label htmlFor="email" className="emaillabel">Email</label>
-                      </div>
-                      <div>
-                      <textarea
-                       required 
-                       type={'text'} 
-                       name="description" 
-                       className="inputdescription"
-                       rows='5'
-                        />
-                        <label htmlFor="description" className="descriptionlabel">Description</label>
-                      </div>
+                    <div className="contact__content__form">
+                        <div className="contact__content__form__controlswrapper">
+                            <div>
+                                <input
+                                    required
+                                    type={"text"}
+                                    name="name"
+                                    className="inputname"
+                                />
+                                <label htmlFor="name" className="namelabel">
+                                    Name
+                                </label>
+                            </div>
+                            <div>
+                                <input
+                                    required
+                                    type={"text"}
+                                    name="email"
+                                    className="inputemail"
+                                />
+                                <label htmlFor="email" className="emaillabel">
+                                    Email
+                                </label>
+                            </div>
+                            <div>
+                                <textarea
+                                    required
+                                    type={"text"}
+                                    name="description"
+                                    className="inputdescription"
+                                    rows="5"
+                                />
+                                <label
+                                    htmlFor="description"
+                                    className="descriptionlabel"
+                                >
+                                    Description
+                                </label>
+                            </div>
+                        </div>
+                        <button>Submit</button>
                     </div>
-                    <button>Submit</button>
-                  </div>
-
                 </Animate>
             </div>
         </section>
