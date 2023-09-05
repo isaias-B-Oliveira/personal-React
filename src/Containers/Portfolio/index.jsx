@@ -15,31 +15,37 @@ const PortifolioDate = [
         id: 2,
         name: "Ecommece",
         image: ImageOne,
+        link: '',
     },
     {
         id: 2,
         name: "sorvete",
         image: ImageTho,
+        link: '',
     },
     {
         id: 2,
         name: "personal",
         image: ImageThee,
+        link: '',
     },
     {
         id: 3,
         name: "Eco",
         image: ImageFour,
+        link: '',
     },
     {
         id: 3,
         name: "dode",
         image: ImageFive,
+        link: '',
     },
     {
         id: 3,
         name: "back",
         image: ImageSis,
+        link: '',
     },
 ];
 
@@ -61,17 +67,21 @@ const filterData = [
 function Portfolio() {
 
     const [filterValue, setFilterValue] = useState(1)
+    const [hoveredValue, setHoveredValue] = useState(null)
 
     function hendlefilter(currenId) {
       setFilterValue(currenId)
-
     }
-    console.log(filterValue)
+    // console.log(filterValue)
 
     const filterItems = filterValue === 1 ? PortifolioDate : 
     PortifolioDate.filter(item => item.id === filterValue)
-    
-    console.log(filterItems)
+    // console.log(filterItems)
+
+    function handleHover(index){
+        setHoveredValue(index)
+    }
+    // console.log(hoveredValue)
 
     return (
         <section id="portfolio" className="portfolio">
@@ -88,12 +98,26 @@ function Portfolio() {
                 </ul>
                 <div className="portfolio__content__cards">
                   {
-                    filterItems.map((item) => (
-                      <div className="portfolio__content__cards__item" key={`cardItem ${item.name.trim()}`}>
+                    filterItems.map((item, index) => (
+                      <div className="portfolio__content__cards__item"
+                       key={`cardItem ${item.name.trim()}`}
+                        onMouseEnter={() => handleHover(index)}
+                        onMouseLeave={() => handleHover(null)}
+                      >
                         <div className="portfolio__content__cards__item__img-wrapper">
-                          <a href="#">
+                          <a>
                             <img alt="dummy data" src={item.image} />
                           </a>
+                        </div>
+                        <div className="overlay">
+                            {
+                                index === hoveredValue && (
+                                    <div>
+                                        <p>{item.name}</p>
+                                        <button>Demo</button>
+                                    </div>
+                                )
+                            }
                         </div>
                       </div>
                     ))
