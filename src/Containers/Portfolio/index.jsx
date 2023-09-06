@@ -15,7 +15,7 @@ const PortifolioDate = [
         id: 2,
         name: "Ecommece",
         image: ImageOne,
-        link: '',
+        link: 'https://isaias-b-oliveira.github.io/portifolio/',
     },
     {
         id: 2,
@@ -105,7 +105,7 @@ function Portfolio() {
                         onMouseLeave={() => handleHover(null)}
                       >
                         <div className="portfolio__content__cards__item__img-wrapper">
-                          <a>
+                          <a> 
                             <img alt="dummy data" src={item.image} />
                           </a>
                         </div>
