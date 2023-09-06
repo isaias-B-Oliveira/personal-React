@@ -17,6 +17,7 @@
 
         &__logo{
             color: var(--theme-main-color);
+            animation: rotation 12s linear infinite;
         }
 
         &__menu{
@@ -55,6 +56,12 @@
 }
 .nav_icon{
     display: none;
+}
+
+@keyframes rotation{
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media only screen and (max-width: 768px){

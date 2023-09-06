@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import PageHeaderContent from "../../components/PageHeaderContainer";
-import { BsInfoCircleFill } from "react-icons/bs";
+import { MdOutlinePortrait } from "react-icons/md";
 import ImageOne from "../../images/image1.png";
 import ImageTho from "../../images/image2.png";
 import ImageThee from "../../images/image3.png";
@@ -87,7 +87,7 @@ function Portfolio() {
         <section id="portfolio" className="portfolio">
             <PageHeaderContent
                 headerText="My Portfolio"
-                icon={<BsInfoCircleFill size={40} />}
+                icon={<MdOutlinePortrait size={40} />}
             />
 
             <div className="portfolio__content">

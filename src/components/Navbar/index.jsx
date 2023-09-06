@@ -13,20 +13,20 @@ const data = [
         label : 'SOBRE',
         to : '/About'
     },
+    // {
+    //     label : 'RESUMO',
+    //     to : '/Resume'
+    // },
     {
-        label : 'RESUME',
-        to : '/Resume'
-    },
-    {
-        label : 'SKILLS',
+        label : 'ABILIDADES',
         to : '/Skils'
     },
     {
-        label : 'PORTFOLIO',
+        label : 'PROJETOS',
         to : '/Portfolio'
     },
     {
-        label : 'CONTACT',
+        label : 'CONTATO',
         to : '/Contact'
     }
 ]

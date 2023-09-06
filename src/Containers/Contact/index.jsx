@@ -1,6 +1,6 @@
 import React from "react";
 import PageHeaderContent from "../../components/PageHeaderContainer";
-import { BsInfoCircleFill } from "react-icons/bs";
+import { MdMarkEmailRead } from "react-icons/md";
 import { Animate } from "react-simple-animate";
 import "./style.scss";
 
@@ -9,7 +9,7 @@ function Contact() {
         <section id="contact" className="contact">
             <PageHeaderContent
                 headerText="My Contact"
-                icon={<BsInfoCircleFill size={40} />}
+                icon={<MdMarkEmailRead size={40} />}
             />
             <div className="contact__content">
                 <Animate

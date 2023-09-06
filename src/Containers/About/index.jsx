@@ -8,6 +8,14 @@ import { FaCss3Alt } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
 import { BiLogoReact } from "react-icons/bi";
 
+// eram duas paginas mais desidir resumir so numa
+import { PiListChecksFill } from "react-icons/pi";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import 'react-vertical-timeline-component/style.min.css'
+import { data } from "../Resume/utils";
+import {MdWork} from 'react-icons/md'
+import './resume.scss'
+
 const personalInfos = [
     {
         label: "Name",
@@ -36,11 +44,11 @@ const ResumePersonal =
 
 function About() {
     return (
+        <>
         <section id="about" className="about">
             <PageHeaderContent
                 headerText="Aboute Me"
-                icon={<BsInfoCircleFill size={40} />}
-            />
+                icon={<BsInfoCircleFill size={40} />} />
 
             <div className="about__content">
                 <div className="about__content__personalwrapper">
@@ -99,32 +107,115 @@ function About() {
                             <div>
                                 <AiOutlineHtml5
                                     size={60}
-                                    color="var(--theme-main-color)"
-                                />
+                                    color="var(--theme-main-color)" />
                             </div>
                             <div>
                                 <FaCss3Alt
                                     size={60}
-                                    color="var(--theme-main-color)"
-                                />
+                                    color="var(--theme-main-color)" />
                             </div>
                             <div>
                                 <RiJavascriptFill
                                     size={60}
-                                    color="var(--theme-main-color)"
-                                />
+                                    color="var(--theme-main-color)" />
                             </div>
                             <div>
                                 <BiLogoReact
                                     size={60}
-                                    color="var(--theme-main-color)"
-                                />
+                                    color="var(--theme-main-color)" />
                             </div>
                         </div>
                     </Animate>
                 </div>
             </div>
         </section>
+        
+        {/* inicio da sesao resume */}
+        <section id="resume" className="resume">
+                <PageHeaderContent
+                    headerText="My Resume"
+                    icon={<PiListChecksFill size={40} />} />
+                <div className="timeline">
+                    <div className="timeline__experience">
+                        <h3 className="timeline__experience__header-text">
+                            Esperience
+                        </h3>
+                        <VerticalTimeline
+                            layout={"1-column"}
+                            lineColor="var(--theme-main-color)"
+                        >
+                            {data.experience.map((item, i) => (
+                                <VerticalTimelineElement
+                                    key={i}
+                                    className="timeline__experience__vertical-timeline-element"
+                                    contentStyle={{
+                                        background: 'none',
+                                        color: 'var(--theme-text-color)',
+                                        border: '1.5px solid var(--theme-main-color)'
+                                    }}
+                                    date="2023 - present"
+                                    icon={<MdWork />}
+                                    iconStyle={{
+                                        background: '#181818',
+                                        color: 'var(--theme-main-color)'
+                                    }}
+                                >
+                                    <div className="vertical-timeline-element-title-wrapper">
+                                        <h3>
+                                            {item.title}
+                                        </h3>
+                                        <h4>
+                                            {item.subTitle}
+                                        </h4>
+                                    </div>
+                                    <p>{item.descripition}</p>
+
+                                </VerticalTimelineElement>
+                            ))}
+                        </VerticalTimeline>
+                    </div>
+                    <div className="timeline__education">
+                        <h3 className="timeline__education__header-text">
+                            Education
+                        </h3>
+                        <VerticalTimeline
+                            layout={"1-column"}
+                            lineColor="var(--theme-main-color)"
+                        >
+                            {data.education.map((item, i) => (
+                                <VerticalTimelineElement
+                                    key={i}
+                                    className="timeline__experience__vertical-timeline-element"
+                                    contentStyle={{
+                                        background: 'none',
+                                        color: 'var(--theme-text-color)',
+                                        border: '1.5px solid var(--theme-main-color)'
+                                    }}
+                                    date="2023 - present"
+                                    icon={<MdWork />}
+                                    iconStyle={{
+                                        background: '#181818',
+                                        color: 'var(--theme-main-color)'
+                                    }}
+                                >
+                                    <div className="vertical-timeline-element-title-wrapper">
+                                        <h3 className="vertical-timeline-element-title">
+                                            {item.title}
+                                        </h3>
+                                        <h4 className="vertical-timeline-element-subtitle">
+                                            {item.subTitle}
+                                        </h4>
+                                    </div>
+                                    <p className="vertical-timeline-element-title-wrapper-description">{item.descripition}</p>
+
+                                </VerticalTimelineElement>
+                            ))}
+                        </VerticalTimeline>
+                    </div>
+                </div>
+            </section>  
+            
+            </>
     );
 }
 

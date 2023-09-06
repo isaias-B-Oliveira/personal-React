@@ -1,6 +1,6 @@
 import React from "react";
 import PageHeaderContent from "../../components/PageHeaderContainer";
-import { BsInfoCircleFill } from "react-icons/bs";
+import { FaBrain } from "react-icons/fa";
 import { skilData } from "./utils";
 import { Animate } from "react-simple-animate";
 import { AnimateKeyframes } from "react-simple-animate";
@@ -12,7 +12,7 @@ function Skils() {
         <section id="skils" className="skils">
             <PageHeaderContent
                 headerText="My Skills"
-                icon={<BsInfoCircleFill size={40} />}
+                icon={<FaBrain size={40} />}
             />
             <div className="skils__content-wrapper">
                 {skilData.map((item, i) => (
