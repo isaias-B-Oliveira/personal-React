@@ -77,20 +77,30 @@
                         left: 50%;
                         transform: translate(-50%, -50%);
                         text-align: center;
+                        display: flex;
+                        flex-direction: column;
 
                         p{
                             color: #000;
-                            margin: 0px;
+                            margin-bottom: 10px;
                             font-size: 4rem;
                             position: relative;
                             overflow: hidden;
                             white-space: nowrap;
                             animation: typingEffect 1s steps(30,end);
+
+                            &::after{
+                                content: '|';
+                                width: 10px;
+                                margin-left: 5px;
+                                opacity: 1;
+                                animation: pisca 1s infinite;
+                            }
                         }
 
-                        button{
+                        a{
                             cursor: pointer;
-                            margin-top: 16px;
+                            margin-top: 20px;
                             padding: 10px 70px;
                             font-size: 2rem;
                             background: transparent;
@@ -98,6 +108,12 @@
                             border: 1.5px solid #000;
                             border-radius: 4px;
                             font-weight: 500;
+                            text-decoration: none;
+
+                            &:hover{
+                                background: var(--theme-background-color);
+                                color: var(--theme-main-color);
+                            }
                         }
                     }
                 }
@@ -128,12 +144,11 @@
 
             .overlay{
                 div > p{
-                    font-size: 2.5rem;
-                }
+                     font-size: 2.5rem;                     
+                } 
             }
         }
     }
-
 }
 
 @keyframes typingEffect{
@@ -142,5 +157,14 @@
     }
     to{
         width: 100%;
+    }
+}
+@keyframes pisca {
+    from{
+        opacity: 1;
+        
+    }
+    to{
+        opacity: 0;
     }
 }

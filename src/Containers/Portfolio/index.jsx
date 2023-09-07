@@ -13,9 +13,10 @@ import './style.scss'
 const PortifolioDate = [
     {
         id: 2,
-        name: "Ecommece",
+        name: "Cite Pessoal",
         image: ImageOne,
         link: 'https://isaias-b-oliveira.github.io/portifolio/',
+        linkcode: 'https://github.com/isaias-B-Oliveira/portifolio',
     },
     {
         id: 2,
@@ -114,7 +115,11 @@ function Portfolio() {
                                 index === hoveredValue && (
                                     <div>
                                         <p>{item.name}</p>
-                                        <button>Demo</button>
+                                        <a href={item.link}
+                                         target="_blank" rel="noreferrer">Demo</a>
+                                          <a href={item.linkcode}
+                                         target="_blank" rel="noreferrer">Code</a>
+                                       
                                     </div>
                                 )
                             }
