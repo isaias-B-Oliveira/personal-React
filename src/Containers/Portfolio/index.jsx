@@ -7,7 +7,9 @@ import ImageTho from "../../images/image2.png";
 import ImageThee from "../../images/image3.png";
 import ImageFour from "../../images/image4.png";
 import ImageFive from "../../images/image5.png";
-import ImageSis from "../../images/image6.png";
+import Imagesis from '../../images/image6.png'
+import Imagesevem from '../../images/image7.png'
+// import ImageSis from "../../images/image6.png";
 import './style.scss'
 
 const PortifolioDate = [
@@ -20,33 +22,45 @@ const PortifolioDate = [
     },
     {
         id: 2,
-        name: "sorvete",
+        name: "cite catalogo",
         image: ImageTho,
-        link: '',
+        link: 'https://react-sorveteria-six.vercel.app/',
+        linkcode: 'https://github.com/isaias-B-Oliveira/react-sorveteria',
     },
     {
         id: 2,
-        name: "personal",
+        name: "Shop Car",
         image: ImageThee,
-        link: '',
+        link: 'https://carrinho-compras-react-one.vercel.app/',
+        linkcode: 'https://github.com/isaias-B-Oliveira/carrinho-compras-react',
     },
     {
-        id: 3,
-        name: "Eco",
+        id: 2,
+        name: "pagina Otica",
         image: ImageFour,
-        link: '',
+        link: 'https://react-projeto-otica-qsnusom0u-isaias-b-oliveira.vercel.app/',
+        linkcode: 'https://github.com/isaias-B-Oliveira/react-projeto-otica',
     },
     {
         id: 3,
-        name: "dode",
+        name: "API upload/img",
         image: ImageFive,
-        link: '',
+        link: 'https://github.com/isaias-B-Oliveira/API-upload-arquivo',
+        linkcode: 'https://github.com/isaias-B-Oliveira/API-upload-arquivo',
+    },
+    {
+        id: 3,
+        name: "API cadrasto usuario",
+        image: Imagesis,
+        link: 'https://github.com/isaias-B-Oliveira/form.node.js',
+        linkcode: 'https://github.com/isaias-B-Oliveira/form.node.js',
     },
     {
         id: 4,
-        name: "back",
-        image: ImageSis,
-        link: '',
+        name: "Todo-List",
+        image: Imagesevem,
+        link: 'https://github.com/isaias-B-Oliveira/crud-en-node.js/tree/main',
+        linkcode: 'https://github.com/isaias-B-Oliveira/crud-en-node.js/tree/main',
     },
 ];
 

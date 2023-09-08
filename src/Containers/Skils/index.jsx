@@ -11,7 +11,7 @@ function Skils() {
     return (
         <section id="skils" className="skils">
             <PageHeaderContent
-                headerText="My Skills"
+                headerText="Minhas Abilidades"
                 icon={<FaBrain size={40} />}
             />
             <div className="skils__content-wrapper">

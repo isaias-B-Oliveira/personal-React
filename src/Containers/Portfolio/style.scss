@@ -40,6 +40,8 @@
                 height: 366px;
                 cursor: pointer;
                 position: relative;
+                border-radius: 5px;
+                border: 4px solid var(--theme-main-color);
 
                 &:hover .overlay{
                     opacity: 1;
