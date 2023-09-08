@@ -43,7 +43,7 @@ const PortifolioDate = [
         link: '',
     },
     {
-        id: 3,
+        id: 4,
         name: "back",
         image: ImageSis,
         link: '',
@@ -62,6 +62,10 @@ const filterData = [
     {
         filterId: 3,
         label: "BACK-END",
+    },
+    {
+        filterId: 4,
+        label: "FULL-STAK",
     },
 ];
 
@@ -87,7 +91,7 @@ function Portfolio() {
     return (
         <section id="portfolio" className="portfolio">
             <PageHeaderContent
-                headerText="My Portfolio"
+                headerText="Meu Portifolio"
                 icon={<MdOutlinePortrait size={40} />}
             />
 

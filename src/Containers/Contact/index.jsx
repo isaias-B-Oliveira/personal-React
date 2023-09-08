@@ -7,6 +7,7 @@ import "./style.scss";
 function Contact() {
     return (
         <section id="contact" className="contact">
+            
             <PageHeaderContent
                 headerText="My Contact"
                 icon={<MdMarkEmailRead size={40} />}

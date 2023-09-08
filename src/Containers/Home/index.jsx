@@ -6,8 +6,8 @@ import "./style.scss";
 function Home() {
     const navigate = useNavigate();
 
-    const handleNavigateContact = () => {
-        navigate("/contact");
+    const handleNavigate = () => {
+        navigate("/about");
     };
 
     return (
@@ -31,7 +31,7 @@ function Home() {
             }}
             >
                 <div className="home__contact-me">
-                    <button onClick={handleNavigateContact}>Entre en Contato</button>
+                    <button onClick={handleNavigate}>Sobre Min</button>
                     
                 </div>
             </Animate>

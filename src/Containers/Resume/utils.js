@@ -1,34 +1,37 @@
 export const data = {
     experience: [
         {
-            title: "consultant",
-            subTitle: "Miani, FL",
-            descripition: "user experience, visual desing",
+            title: "Front-end developer",
+            subTitle: "github",
+            descripition:
+                "contribuicao com melhorias em projetos de outros desenvolvedores",
         },
         {
-            title: "consultant",
-            subTitle: "Miani, FL",
-            descripition: "user experience, visual desing",
+            title: "Eventos online e",
+            subTitle: "Workshops",
+            descripition:
+                "participação em workshops onde aprimoramos nossas abilidades como programador",
         },
         {
-            title: "consultant",
-            subTitle: "Miani, FL",
-            descripition: "user experience, visual desing",
+            title: "Projetos Pessoais",
+            subTitle: "",
+            descripition:
+                "programando diversos projetos pessoais onde coloco en pratica tudo o que aprendo",
         },
     ],
     education: [
         {
-            title: "front- end",
+            title: "Curso Tecnico",
             subTitle: "DevMedia",
-            descripition: "carreira front-end",
+            descripition: "carreira Fullstack",
         },
         {
-            title: "ADS",
+            title: "Curso superior Tecnologo",
             subTitle: "UniCesuma",
-            descripition: "analize e dsenvolvimento de sistemas",
+            descripition: "Analize e dsenvolvimento de sistemas",
         },
         {
-            title: "encino medio",
+            title: "",
             subTitle: "E.E Gilney de sousa",
             descripition: "encino medio",
         },

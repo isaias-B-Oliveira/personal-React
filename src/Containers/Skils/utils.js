@@ -11,12 +11,20 @@ export const skilData = [
                 porcetage: "70",
             },
             {
+                skillName: "BOOTSTRAP",
+                porcetage: "30",
+            },
+            {
                 skillName: "JAVASCRIPT",
                 porcetage: "70",
             },
             {
                 skillName: "REACT",
                 porcetage: "60",
+            },
+            {
+                skillName: "SCSS",
+                porcetage: "10",
             },
         ],
     },
