@@ -26,12 +26,12 @@ const data = [
         to : '/Portfolio'
     },
     {
-        label : 'CONTATO',
+        label : 'CONTATOS',
         to : '/Contact'
     }
 ]
 
-const Navbar =() => {
+const Navbar =(props) => {
 
     const [togleicon, settogleicon] = useState(false)
 

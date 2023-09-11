@@ -9,7 +9,7 @@ function Contact() {
         <section id="contact" className="contact">
             
             <PageHeaderContent
-                headerText="My Contact"
+                headerText="Meus Contatos"
                 icon={<MdMarkEmailRead size={40} />}
             />
             <div className="contact__content">
@@ -25,7 +25,7 @@ function Contact() {
                     }}
                 >
                     <h3 className="contact__content__header-text">
-                        Let´s Talk
+                        Me Envie um Email
                     </h3>
                 </Animate>
                 <Animate
@@ -49,7 +49,7 @@ function Contact() {
                                     className="inputname"
                                 />
                                 <label htmlFor="name" className="namelabel">
-                                    Name
+                                     Name
                                 </label>
                             </div>
                             <div>
@@ -75,11 +75,11 @@ function Contact() {
                                     htmlFor="description"
                                     className="descriptionlabel"
                                 >
-                                    Description
+                                    Assunto
                                 </label>
                             </div>
                         </div>
-                        <button>Submit</button>
+                        <button>Enviar</button>
                     </div>
                 </Animate>
             </div>
