@@ -18,15 +18,15 @@ import './resume.scss'
 
 const personalInfos = [
     {
-        label: "Name",
+        label: "Nome",
         value: "Isaias",
     },
     {
-        label: "Age",
+        label: "Idade",
         value: "27",
     },
     {
-        label: "Address",
+        label: "Pais",
         value: "Brasil",
     },
     {
@@ -40,21 +40,21 @@ const personalInfos = [
 ];
 
 const ResumePersonal =
-    "Sou estudande de analize e desenvolvimento de sistamas na universidade UNICESUMAR, en paralelo estudo na escola de programação DEVmedia, atualmente estou focado na carreira front-end mais a meta e ser full-stack. atualmente tenho uma base nas tecnologias html-5, css-3, javascript, react.js, e git estudo e pratico todos os dias, pois a constançia e a chave para ser um bon desenvolvedor";
+    "Sou estudande de analize e desenvolvimento de sistamas na universidade UNICESUMAR, en paralelo estudo na escola de programação DEVmedia, atualmente estou focado na carreira front-end mais a meta e ser full-stack. atualmente tenho uma base nas tecnologias HTML-5, CSS-3, BOOTSTRAP, JAVASCRIPT, REACT.js, NODEjs, SQL, e GIT estudo e pratico todos os dias, pois a constançia e a chave para ser um bon desenvolvedor";
 
 function About() {
     return (
         <>
         <section id="about" className="about">
             <PageHeaderContent
-                headerText="Aboute Me"
+                headerText="Sobre Min"
                 icon={<BsInfoCircleFill size={40} />} />
 
             <div className="about__content">
                 <div className="about__content__personalwrapper">
                     <Animate
                         play
-                        duration={1.5}
+                        duration={1}
                         delay={1}
                         start={{
                             transform: "translateX(-900px)",
@@ -79,7 +79,7 @@ function About() {
                         }}
                     >
                         <h3 className="personalInformationText">
-                            Personal Infomation
+                            Informaçõens Pessoais :
                         </h3>
                         <ul>
                             {personalInfos.map((item, i) => (
@@ -133,12 +133,12 @@ function About() {
         {/* inicio da sesao resume */}
         <section id="resume" className="resume">
                 <PageHeaderContent
-                    headerText="My Resume"
+                    headerText="Formação e experiencia"
                     icon={<PiListChecksFill size={40} />} />
                 <div className="timeline">
                     <div className="timeline__experience">
                         <h3 className="timeline__experience__header-text">
-                            Esperience
+                            Esperiencia
                         </h3>
                         <VerticalTimeline
                             layout={"1-column"}
@@ -176,7 +176,7 @@ function About() {
                     </div>
                     <div className="timeline__education">
                         <h3 className="timeline__education__header-text">
-                            Education
+                            Educação
                         </h3>
                         <VerticalTimeline
                             layout={"1-column"}

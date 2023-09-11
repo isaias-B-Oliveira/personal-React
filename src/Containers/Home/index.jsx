@@ -14,7 +14,7 @@ function Home() {
         <section id="home" className="home">
             <div className="home__text-wrapper">
                 <h1>
-                    hello, I´m Isaias
+                    Ola! sou Isaias
                     <br />
                     Web Developer
                 </h1>

@@ -3,7 +3,7 @@
 export default {
     background: {
         color: {
-            value: "#1d1d1d",
+            value: "#212529",
         },
     },
     fpsLimit: 120,
@@ -31,10 +31,10 @@ export default {
     },
     particles: {
         color: {
-            value: "#ffffff",
+            value: "#89fc00",
         },
         links: {
-            color: "#ffffff",
+            color: "#04e762",
             distance: 150,
             enable: true,
             opacity: 0.5,
@@ -61,10 +61,10 @@ export default {
             value: 0.5,
         },
         shape: {
-            type: "circle",
+            type: "triangle",
         },
         size: {
-            value: { min: 1, max: 5 },
+            value: { min: 1, max: 7 },
         },
     },
     detectRetina: true,
