@@ -1,11 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeaderContent from "../../components/PageHeaderContainer";
 import { MdMarkEmailRead } from "react-icons/md";
 import { Animate } from "react-simple-animate";
+import emailjs from '@emailjs/browser'
 import "./style.scss";
 
 function Contact() {
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
+    function sedEmail(e) {
+        e.preventDefault();
+
+        if(name === '' || email === '' || message === ''){
+            alert('preencha todos os capos')
+            return
+        }
+        
+        const templeteParams = {
+            from_name: name,
+            message: message,
+            email: email,
+        }
+
+        emailjs.send('service_olu28vq', 'template_8mevrxs', templeteParams, 'uaiidWJ3zgNFQuQ-t')
+        .then((response) => {
+            console.log('Email Enviado', response.status, response.text)
+            setName('')
+            setEmail('')
+            setMessage('')
+        }, (err) => {
+            console.log('erro: ', err)
+        })
+    }
+
     return (
+
         <section id="contact" className="contact">
             
             <PageHeaderContent
@@ -39,14 +71,15 @@ function Contact() {
                         transform: "translateX(0px)",
                     }}
                 >
-                    <div className="contact__content__form">
+                    <form className="contact__content__form" onSubmit={sedEmail}>
                         <div className="contact__content__form__controlswrapper">
                             <div>
                                 <input
-                                    required
                                     type={"text"}
                                     name="name"
                                     className="inputname"
+                                    onChange={(e) => setName(e.target.value)}
+                                    value={name}
                                 />
                                 <label htmlFor="name" className="namelabel">
                                      Name
@@ -54,10 +87,11 @@ function Contact() {
                             </div>
                             <div>
                                 <input
-                                    required
                                     type={"text"}
                                     name="email"
                                     className="inputemail"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
                                 />
                                 <label htmlFor="email" className="emaillabel">
                                     Email
@@ -65,22 +99,23 @@ function Contact() {
                             </div>
                             <div>
                                 <textarea
-                                    required
                                     type={"text"}
-                                    name="description"
+                                    name="messege"
                                     className="inputdescription"
                                     rows="5"
+                                    onChange={(e) => setMessage(e.target.value)}
+                                    value={message}
                                 />
                                 <label
-                                    htmlFor="description"
+                                    htmlFor="message"
                                     className="descriptionlabel"
                                 >
                                     Assunto
                                 </label>
                             </div>
                         </div>
-                        <button>Enviar</button>
-                    </div>
+                        <input className="button" type="Submit" value='Enviar' />
+                    </form>
                 </Animate>
             </div>
         </section>

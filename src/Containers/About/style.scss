@@ -96,9 +96,10 @@
 @media  only screen and (max-width: 768px) {
     .about__content{
         flex-direction: column;
+        width: 100vw;
 
         &__personalwrapper, &__servicewrapper{
-            width: 100%;
+            width: 100vw;
         }
 
         &__servicewrapper{
