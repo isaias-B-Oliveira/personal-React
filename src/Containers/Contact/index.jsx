@@ -149,12 +149,16 @@ function Contact() {
                     }}
                 >
                 <div className="container">
-                    <div className="container-wrapper">
-                    <a href="#" className="container-wrapper-icons">
+                    <div className="container-wrapper"> 
+                    <a href="https://www.linkedin.com/in/isaias-oliveira-942219257/" 
+                    target="_blank" rel='noreferrer'
+                    className="container-wrapper-icons">
                         <BiLogoLinkedinSquare size={40} />
                     </a>
 
-                    <a href="#" className="container-wrapper-icons">
+                    <a href="https://github.com/isaias-B-Oliveira" 
+                    target="_blank" rel="noreferrer"
+                    className="container-wrapper-icons">
                         <FaGithubSquare size={40} />
                     </a>  
                     </div>
