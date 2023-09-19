@@ -23,7 +23,7 @@ export const skilData = [
                 porcetage: "60",
             },
             {
-                skillName: "SCSS",
+                skillName: "SASS",
                 porcetage: "10",
             },
         ],
