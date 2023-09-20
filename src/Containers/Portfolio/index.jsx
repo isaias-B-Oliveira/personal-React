@@ -24,7 +24,7 @@ const PortifolioDate = [
         id: 2,
         name: "cite catalogo",
         image: ImageTho,
-        link: 'https://react-sorveteria-six.vercel.app/',
+        link: 'https://react-sorveteria-git-branch-novo-isaias-b-oliveira.vercel.app/',
         linkcode: 'https://github.com/isaias-B-Oliveira/react-sorveteria',
     },
     {
